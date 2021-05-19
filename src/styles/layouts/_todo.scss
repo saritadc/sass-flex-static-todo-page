@@ -27,44 +27,70 @@ $white: #fff;
     &--color {
       color: $blue;
     }
-    &--size{
-        font-size: 26px;
-        font-weight: 600;
-        i{
-            font-size: 40px;
-        }
-        h2{
-            text-decoration: underline;
-        }
+    &--size {
+      font-size: 26px;
+      font-weight: 600;
+      i {
+        font-size: 40px;
+      }
+      h2 {
+        text-decoration: underline;
+      }
     }
   }
 
   /****************
    * add new item *
    ***************/
-&__add-new-item{
+  &__add-new-item {
     display: flex;
     flex-direction: row;
     padding: 15px;
     border-radius: 5px;
     margin: 30px 60px;
     background-color: $white;
-    input[type="text"]{
-        flex-grow: 2;
-        border: none;
-        padding: 10px;
+    input[type='text'] {
+      flex-grow: 2;
+      border: none;
+      padding: 10px;
     }
-    input:focus{
-        outline: none;
+    input:focus {
+      outline: none;
     }
-    button{
-        border: none;
-        outline: none;
-        background-color: $blue;
-        color: $white;
-        padding: 10px 15px;
-        border-radius: 5px;
+    button {
+      border: none;
+      outline: none;
+      background-color: $blue;
+      color: $white;
+      padding: 10px 15px;
+      border-radius: 5px;
     }
-}
+    button:hover {
+      cursor: pointer;
+    }
+  }
 
+  /***********************
+   * filter sort section *
+   **********************/
+  &__items-filter-sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 2px solid #e5e6e7;
+    padding: 30px 60px;
+    .filter {
+      padding-right: 15px;
+    }
+    select {
+      border: 1px solid #e5e6e7;
+      padding: 7px;
+      border-radius: 5px;
+      margin-left: 4px;
+    }
+  }
+  /**************
+   * items list *
+   **************/
+   
 }
