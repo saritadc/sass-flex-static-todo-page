@@ -2,6 +2,9 @@ $gray: #f2f4f7;
 $blue: #1f75e6;
 $grayDark: #53575c;
 
+/**********************
+ * main container box *
+ **********************/
 .main-container {
   width: 80%;
   margin: auto;
@@ -9,4 +12,34 @@ $grayDark: #53575c;
   padding: 30px 20px;
   margin-top: 5%;
   box-shadow: 0 0 10px #cac9c9;
+  /**********
+   * header *
+   **********/
+  &__title {
+    text-align: center;
+    padding-bottom: 25px;
+    i,
+    h2 {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    &--color {
+      color: $blue;
+    }
+    &--size{
+        font-size: 26px;
+        font-weight: 600;
+        i{
+            font-size: 40px;
+        }
+        h2{
+            text-decoration: underline;
+        }
+    }
+  }
+
+  /**********
+   * add new input *
+   **********/
+   
 }
