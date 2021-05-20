@@ -1,1 +1,1 @@
-#Static TODO app created using sass
+# Static TODO app created using sass
