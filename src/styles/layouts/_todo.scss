@@ -1,10 +1,14 @@
 $gray: #f2f4f7;
+$grayLighter: #e5e6e7;
 $blue: #1f75e6;
 $blueLight: #76a6e6c4;
 $grayDark: #53575c;
 $white: #fff;
 $red: #d34f4f;
 $green: #338d33;
+
+
+
 %checklist-display {
   display: inline-flex;
   flex-flow: row wrap;
@@ -87,14 +91,14 @@ $green: #338d33;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    border-top: 2px solid #e5e6e7;
+    border-top: 2px solid $grayLighter;
     padding: 30px 60px;
     font-size: 12px;
     .filter {
       padding-right: 15px;
     }
     select {
-      border: 1px solid #e5e6e7;
+      border: 1px solid $grayLighter;
       padding: 5px;
       border-radius: 5px;
       margin-left: 4px;
@@ -156,7 +160,7 @@ $green: #338d33;
           display: block;
           text-align: right;
           font-size: 10px;
-          color: gray;
+          color: $grayDark;
           margin-top: 10px;
         }
       }
