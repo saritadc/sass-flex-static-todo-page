@@ -65,14 +65,16 @@
         <!-- first checklist row starts -->
         <div class="checklist-row">
           <div class="form-group">
-            <input type="checkbox" id="item1" name="item1" value="item1" class="styled-checkbox">
-            <label for="item1"> Buy groceries for next week</label><br>
+            <label class="styled-checkbox" for="item1">Buy groceries for next week
+              <input type="checkbox" id="item1" name="item1" value="item1">
+              <span class="checkmark"></span>
+            </label>
           </div>
           <div class="icons-group">
-            <i class="fas fa-pen icon icon-pen  tooltip">
+            <i class="fas fa-pen icon icon-pen tooltip">
               <span class="tooltiptext">Edit todo</span>
             </i>
-            <i class="fas fa-trash-alt icon icon-trash  tooltip">
+            <i class="fas fa-trash-alt icon icon-trash tooltip">
               <span class="tooltiptext">Delete todo</span>
             </i>
             <div class="date">
@@ -88,12 +90,14 @@
         <!-- second checklist row starts-->
         <div class="checklist-row">
           <div class="form-group">
-            <input type="checkbox" id="item2" name="item2" value="item2" class="styled-checkbox">
-            <label for="item2"> Renew car insurance</label><br>
+            <label class="styled-checkbox" for="item2">Renew car insurance
+              <input type="checkbox" id="item2" name="item2" value="item2">
+              <span class="checkmark"></span>
+            </label>
           </div>
           <div class="icons-group">
-            <i class="fas fa-pen icon icon-pen"></i>
-            <i class="fas fa-trash-alt icon icon-trash"></i>
+            <i class="fas fa-pen icon icon-pen tooltip"><span class="tooltiptext">Edit todo</span></i>
+            <i class="fas fa-trash-alt icon icon-trash tooltip"><span class="tooltiptext">Delete todo</span></i>
             <div class="date">
               <i class="fas fa-info-circle tooltip">
                 <span class="tooltiptext">Created date</span>
@@ -107,13 +111,16 @@
         <!-- third checklist row starts-->
         <div class="checklist-row">
           <div class="form-group">
-            <input type="checkbox" id="item3" name="item3" value="item3" class="styled-checkbox">
-            <input type="text" class="edit-input" value="Sign up for online course Edit Test" />
+            <label class="styled-checkbox" for="item3">
+              <input type="checkbox" id="item3" name="item3" value="item3">
+              <span class="checkmark"></span>
+            </label>
+            <input type="text" class="edit-input" value="Sign up for online course edit test" />
 
           </div>
           <div class="icons-group">
-            <i class="fas fa-pen icon icon-pen"></i>
-            <i class="fas fa-trash-alt icon icon-trash"></i>
+            <!-- <i class="fas fa-pen icon icon-pen tooltip"><span class="tooltiptext">Edit todo</span></i> -->
+            <i class="fas fa-trash-alt icon icon-trash tooltip"><span class="tooltiptext">Delete todo</span></i>
             <div class="date">
               <i class="fas fa-info-circle tooltip">
                 <span class="tooltiptext">Created date</span>

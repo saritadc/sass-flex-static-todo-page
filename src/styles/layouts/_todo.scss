@@ -55,7 +55,7 @@ $green: #338d33;
   &__add-new-item {
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    padding: 7px;
     border-radius: 5px;
     margin: 30px 60px;
     background-color: $white;
@@ -118,7 +118,6 @@ $green: #338d33;
    *******************/
   &__checklist-items {
     padding: 30px 60px;
-    font-size: 16px;
     color: $grayDark;
     .checklist-row {
       display: flex;
@@ -126,15 +125,19 @@ $green: #338d33;
       align-items: center;
       .form-group {
         @extend %checklist-display;
+        font-size: 16px;
         margin-right: auto;
+        display: block;
+        width: calc(100% - 100px);
         .edit-input {
-          width: 100%;
-          padding: 10px;
+          width: calc(100% - 220px);
+          padding: 5px 7px;
           background-color: $white;
           border: none;
           outline: none;
           font-size: 16px;
           color: $grayDark;
+          border-radius: 4px;
         }
       }
       .icons-group {
@@ -168,61 +171,61 @@ $green: #338d33;
 * style checkbox color *
 ***********************/
 .styled-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: -3px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+}
+/* Hide the browser's default checkbox */
+.styled-checkbox input {
   position: absolute;
   opacity: 0;
-  & + label {
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-  }
-  & + label:before {
-    content: '';
-    margin-right: 10px;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background: transparent;
-    border: 2px solid $blue;
-    border-radius: 2px;
-  }
-  & + input[type='text']:before {
-    content: '';
-    margin-right: 10px;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background: transparent;
-    border: 2px solid $blue;
-    border-radius: 2px;
-  }
-  // &:checked + label:before {
-    //   // background: $blue;
-    // }
-    /**************************** 
-    * style checkbox-tick color *
-    *****************************/
-    &:checked + label:after {
-      content: '';
-    position: absolute;
-    left: 2px;
-    top: 6px;
-    // background: $blue;
-    width: 2px;
-    height: 2px;
-    box-shadow: 2px 0 0 $blue, 4px 0 0 $blue, 4px -2px 0 $blue, 4px -4px 0 $blue, 4px -6px 0 $blue, 4px -8px 0 $blue;
-    transform: rotate(45deg);
-  }
-  &:checked + input[type='text']:after {
-    content: '';
-    position: absolute;
-    left: 2px;
-    top: 6px;
-    // background: $blue;
-    width: 2px;
-    height: 2px;
-    box-shadow: 2px 0 0 $blue, 4px 0 0 $blue, 4px -2px 0 $blue, 4px -4px 0 $blue, 4px -6px 0 $blue, 4px -8px 0 $blue;
-    transform: rotate(45deg);
-  }
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: transparent;
+  border: 2px solid $blue;
+  border-radius: 2px;
+}
+.styled-checkboxr input:checked ~ .checkmark {
+  background-color: transparent;
+}
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.styled-checkbox input:checked ~ .checkmark:after {
+  display: block;
+ 
+}
+.styled-checkbox .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid $blue;
+  border-width: 0 3px 3px 0;;
+  transform: rotate(45deg);
+}
+.edit-input {
+  margin-left: 35px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /**********
