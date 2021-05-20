@@ -35,7 +35,7 @@
       <!-- filter section starts-->
       <form action="" class="filter">
         <label for="filter">Filter</label>
-        <select id="filter" name="filter">
+        <select id="filter" name="filter" class="select">
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="active">Active</option>
@@ -47,7 +47,7 @@
       <!-- sort section starts-->
       <form action="" class="sort">
         <label for="sort">Sort</label>
-        <select id="sort" name="sort">
+        <select id="sort" name="sort" class="select">
           <option value="addedDate">Added date</option>
           <option value="active">Due date</option>
         </select>
@@ -69,8 +69,18 @@
             <label for="item1"> Buy groceries for next week</label><br>
           </div>
           <div class="icons-group">
-            <i class="fas fa-pen"></i>
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-pen icon icon-pen  tooltip">
+              <span class="tooltiptext">Edit todo</span>
+            </i>
+            <i class="fas fa-trash-alt icon icon-trash  tooltip">
+              <span class="tooltiptext">Delete todo</span>
+            </i>
+            <div class="date">
+              <i class="fas fa-info-circle tooltip">
+                <span class="tooltiptext">Created date</span>
+              </i>
+              28 Jun 2020
+            </div>
           </div>
         </div>
         <!-- first checklist row ends-->
@@ -82,8 +92,14 @@
             <label for="item2"> Renew car insurance</label><br>
           </div>
           <div class="icons-group">
-            <i class="fas fa-pen"></i>
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-pen icon icon-pen"></i>
+            <i class="fas fa-trash-alt icon icon-trash"></i>
+            <div class="date">
+              <i class="fas fa-info-circle tooltip">
+                <span class="tooltiptext">Created date</span>
+              </i>
+              28 Jun 2020
+            </div>
           </div>
         </div>
         <!-- second checklist row ends-->
@@ -92,11 +108,18 @@
         <div class="checklist-row">
           <div class="form-group">
             <input type="checkbox" id="item3" name="item3" value="item3" class="styled-checkbox">
-            <label for="item3"> Sign up for online course Edit Test</label>
+            <input type="text" class="edit-input" value="Sign up for online course Edit Test" />
+
           </div>
           <div class="icons-group">
-            <i class="fas fa-pen"></i>
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-pen icon icon-pen"></i>
+            <i class="fas fa-trash-alt icon icon-trash"></i>
+            <div class="date">
+              <i class="fas fa-info-circle tooltip">
+                <span class="tooltiptext">Created date</span>
+              </i>
+              28 Jun 2020
+            </div>
           </div>
         </div>
         <!-- third checklist row ends-->
