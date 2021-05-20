@@ -2,12 +2,20 @@ $gray: #f2f4f7;
 $blue: #1f75e6;
 $grayDark: #53575c;
 $white: #fff;
+$red: #d34f4f;
+$green: #338d33;
+%checklist-display {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
 
 /**********************
  * main container box *
  **********************/
 .main-container {
-  width: 80%;
+  width: 60%;
   margin: auto;
   background-color: $gray;
   padding: 30px 20px;
@@ -45,14 +53,14 @@ $white: #fff;
   &__add-new-item {
     display: flex;
     flex-direction: row;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     margin: 30px 60px;
     background-color: $white;
     input[type='text'] {
       flex-grow: 2;
       border: none;
-      padding: 10px;
+      font-size: 16px;
     }
     input:focus {
       outline: none;
@@ -79,6 +87,7 @@ $white: #fff;
     justify-content: flex-end;
     border-top: 2px solid #e5e6e7;
     padding: 30px 60px;
+    font-size: 14px;
     .filter {
       padding-right: 15px;
     }
@@ -87,10 +96,52 @@ $white: #fff;
       padding: 7px;
       border-radius: 5px;
       margin-left: 4px;
+      option{
+        padding: 3px;
+      }
+    }
+    .sort{
+      i{
+        color: $green;
+      }
     }
   }
   /**************
    * items list *
    **************/
-   
+  &__checklist-items {
+    padding: 30px 60px;
+    font-size: 16px;
+    color: $grayDark;
+    .checklist-row {
+      display: flex;
+      .form-group {
+        @extend %checklist-display;
+        padding-bottom: 25px;
+        margin-right: auto;
+      }
+      input[type='checkbox'] {
+        border: 1px solid $blue;
+        margin-right: 10px;
+        width: 14px;
+        height: 14px;
+      }
+      .icons-group {
+        display: none;
+      }
+      .form-group:hover + .icons-group {
+        @extend %checklist-display;
+        margin-left: auto;
+        i {
+          padding-left: 25px;
+        }
+        i:nth-child(1) {
+          color: $green;
+        }
+        i:nth-child(2) {
+          color: $red;
+        }
+      }
+    }
+  }
 }

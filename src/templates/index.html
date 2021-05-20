@@ -19,7 +19,7 @@
     <!-- header starts -->
     <header class="main-container__title main-container__title--color main-container__title--size">
       <i class="fas fa-check-square"></i>
-      <h2>My Todo-s</h2>
+      <h2>My Todos</h2>
     </header>
     <!-- header ends -->
 
@@ -32,7 +32,6 @@
 
     <!-- filter and sort section starts -->
     <div class="main-container__items-filter-sort">
-
       <!-- filter section starts-->
       <form action="" class="filter">
         <label for="filter">Filter</label>
@@ -52,6 +51,7 @@
           <option value="addedDate">Added date</option>
           <option value="active">Due date</option>
         </select>
+        <i class="fas fa-sort-amount-down-alt"></i>
       </form>
       <!-- sort section ends -->
 
@@ -59,6 +59,49 @@
     <!-- filter and sort section ends -->
 
 
+    <!-- checklist items starts -->
+    <div class="main-container__checklist-items">
+      <form>
+        <!-- first checklist row starts -->
+        <div class="checklist-row">
+          <div class="form-group">
+            <input type="checkbox" id="item1" name="item1" value="item1">
+            <label for="item1">Bur groceries for next week</label><br>
+          </div>
+          <div class="icons-group">
+            <i class="fas fa-pen"></i>
+            <i class="fas fa-trash-alt"></i>        </div>
+        </div>
+        <!-- first checklist row ends-->
+
+        <!-- second checklist row starts-->
+        <div class="checklist-row">
+          <div class="form-group">
+            <input type="checkbox" id="item2" name="item2" value="item2">
+            <label for="item2"> Renew car insurance</label><br>
+          </div>
+          <div class="icons-group">
+            <i class="fas fa-pen"></i>
+            <i class="fas fa-trash-alt"></i>
+          </div>
+        </div>
+        <!-- second checklist row ends-->
+
+        <!-- third checklist row starts-->
+        <div class="checklist-row">
+          <div class="form-group">
+            <input type="checkbox" id="item3" name="item3" value="item3">
+            <label for="item3"> Sign up for online course Edit Test</label>
+          </div>
+          <div class="icons-group">
+            <i class="fas fa-pen"></i>
+            <i class="fas fa-trash-alt"></i>
+          </div>
+        </div>
+        <!-- third checklist row ends-->
+      </form>
+    </div>
+    <!-- checklist items ends -->
 
 
 
