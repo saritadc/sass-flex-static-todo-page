@@ -20,7 +20,7 @@ $green: #338d33;
   background-color: $gray;
   padding: 30px 20px;
   margin-top: 5%;
-  box-shadow: 0 0 10px #cac9c9;
+  box-shadow: 0 4px 9px #cac9c9;
   /**********
    * header *
    **********/
@@ -96,19 +96,19 @@ $green: #338d33;
       padding: 7px;
       border-radius: 5px;
       margin-left: 4px;
-      option{
+      option {
         padding: 3px;
       }
     }
-    .sort{
-      i{
+    .sort {
+      i {
         color: $green;
       }
     }
   }
-  /**************
-   * items list *
-   **************/
+  /*******************
+   * checklist items *
+   *******************/
   &__checklist-items {
     padding: 30px 60px;
     font-size: 16px;
@@ -120,12 +120,48 @@ $green: #338d33;
         padding-bottom: 25px;
         margin-right: auto;
       }
-      input[type='checkbox'] {
-        border: 1px solid $blue;
-        margin-right: 10px;
-        width: 14px;
-        height: 14px;
+      // input[type='checkbox'] {
+      //   border: 1px solid $blue;
+      //   margin-right: 10px;
+      //   width: 14px;
+      //   height: 14px;
+      // }
+      .styled-checkbox {
+        position: absolute;
+        opacity: 0;
+        & + label {
+          position: relative;
+          cursor: pointer;
+          padding: 0;
+        }
+        & + label:before {
+          content: '';
+          margin-right: 10px;
+          display: inline-block;
+          // vertical-align: text-top;
+          width: 14px;
+          height: 14px;
+          background: transparent;
+          border: 2px solid $blue;
+          border-radius: 2px;
+        }
+        &:checked + label:before {
+          // background: $blue;
+        }
+        &:checked + label:after {
+          content: '';
+          position: absolute;
+          left: 2px;
+          top: 6px;
+          // background: $blue;
+          width: 2px;
+          height: 2px;
+          box-shadow: 2px 0 0 $blue, 4px 0 0 $blue, 4px -2px 0 $blue, 4px -4px 0 $blue, 4px -6px 0 $blue,
+            4px -8px 0 $blue;
+          transform: rotate(45deg);
+        }
       }
+
       .icons-group {
         display: none;
       }
